@@ -6,11 +6,11 @@ import {
   ArrowRight,
   CheckCircle2,
   Smartphone,
-  Sparkles,
-  FolderTree,
-  Users,
+  // Sparkles,
+  // FolderTree,
+  // Users,
 } from "lucide-react";
-import InteractiveEditorDemo from "./components/InteractiveEditorDemo";
+// import InteractiveEditorDemo from "./components/InteractiveEditorDemo";
 
 export default function HomePage() {
   return (
@@ -53,7 +53,7 @@ export default function HomePage() {
         </div>
 
         {/* Device Badges / Compatibility */}
-        <div className="mt-8 flex items-center justify-center gap-6 text-xs text-[#86868b]">
+        <div className="mt-8 flex items-center justify-center gap-6 text-xs text-[#86868b] pb-16 border-b border-b-gray-100">
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#1d1d1f]" />
             iOS & iPadOS
@@ -69,9 +69,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. INTERACTIVE LIVE DEMO SECTION */}
-      {/* 2. INTERACTIVE LIVE DEMO SECTION */}
-      <section
+      {/* <section
         id="interactive-demo"
         className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f5f5f7]"
       >
@@ -91,12 +89,12 @@ export default function HomePage() {
 
           <InteractiveEditorDemo />
         </div>
-      </section>
+      </section> */}
 
       {/* 3. CORE ARCHITECTURAL FEATURES */}
       <section
         id="features"
-        className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
+        className="pt-10 pb-20 sm:pt-0 sm:pb-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
       >
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="text-xs uppercase tracking-widest text-[#c5a028] font-bold">
@@ -406,13 +404,13 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-[#86868b]">
-              <span>Passwordless Google & Apple Sign-In</span>
+            {/* <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-[#86868b]">
+              <span>Passwordless Google</span>
               <span>&bull;</span>
               <span>YouVersion Platform Verified</span>
               <span>&bull;</span>
               <span>30-Day Protected Account Data</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
