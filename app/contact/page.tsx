@@ -75,7 +75,7 @@ export default function ContactPage() {
       <section className="pt-16 pb-12 sm:pt-24 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f5f5f7] border border-black/8 text-xs font-medium text-[#1d1d1f] mb-6">
           <Mail className="w-3.5 h-3.5 text-[#c5a028]" />
-          <span>Support & Partnerships</span>
+          <span>Support</span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-[#1d1d1f] max-w-3xl mx-auto leading-tight">
