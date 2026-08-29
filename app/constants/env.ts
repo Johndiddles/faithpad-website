@@ -1,0 +1,4 @@
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+export const IOS_DOWNLOAD_URL = process.env.NEXT_PUBLIC_IOS_DOWNLOAD_URL;
+export const ANDROID_DOWNLOAD_URL =
+  process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL;

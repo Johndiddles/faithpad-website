@@ -1,16 +1,11 @@
-import Link from "next/link";
 import {
   BookOpen,
   Columns,
   CloudCheck,
-  ArrowRight,
   CheckCircle2,
   Smartphone,
-  // Sparkles,
-  // FolderTree,
-  // Users,
 } from "lucide-react";
-// import InteractiveEditorDemo from "./components/InteractiveEditorDemo";
+import { ANDROID_DOWNLOAD_URL, IOS_DOWNLOAD_URL } from "./constants/env";
 
 export default function HomePage() {
   return (
@@ -36,24 +31,25 @@ export default function HomePage() {
         </p>
 
         {/* Call-to-Action Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="#download"
-            className="apple-button-primary px-8 py-3.5 text-sm sm:text-base font-medium flex items-center justify-center gap-2 w-full sm:w-auto shadow-sm"
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href={IOS_DOWNLOAD_URL}
+            className="bg-black text-white px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-[#333] transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
           >
-            <span>Download for iOS & Android</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          {/* <Link
-            href="#interactive-demo"
-            className="apple-button-secondary px-8 py-3.5 text-sm sm:text-base font-medium flex items-center justify-center gap-2 w-full sm:w-auto"
+            <Smartphone className="w-4 h-4" />
+            <span>App Store (iOS)</span>
+          </a>
+          <a
+            href={ANDROID_DOWNLOAD_URL}
+            className="bg-black/80 border border-white/20 px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-black text-white transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
           >
-            <span>Try Live Editor Demo</span>
-          </Link> */}
+            <Smartphone className="w-4 h-4" />
+            <span>Google Play (Android)</span>
+          </a>
         </div>
 
         {/* Device Badges / Compatibility */}
-        <div className="mt-8 flex items-center justify-center gap-6 text-xs text-[#86868b] pb-16 border-b border-b-gray-100">
+        <div className="mt-8 flex items-center justify-center gap-6 text-xs text-[#86868b]">
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#1d1d1f]" />
             iOS & iPadOS
@@ -90,145 +86,6 @@ export default function HomePage() {
           <InteractiveEditorDemo />
         </div>
       </section> */}
-
-      {/* 3. CORE ARCHITECTURAL FEATURES */}
-      <section
-        id="features"
-        className="pt-10 pb-20 sm:pt-0 sm:pb-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
-      >
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-xs uppercase tracking-widest text-[#c5a028] font-bold">
-            Theological Architecture
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] mt-3 leading-tight">
-            Engineered without compromise for spiritual depth.
-          </h2>
-          <p className="text-base sm:text-lg text-[#6e6e73] mt-4">
-            Traditional word processors interrupt your flow with endless
-            formatting and app switching. Faith Pad keeps your eyes on the text.
-          </p>
-        </div>
-
-        {/* Feature Cards Grid (Apple Grid) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card 1: Collapsible Verses */}
-          <div className="apple-card p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
-                <BookOpen className="w-6 h-6 text-[#c5a028]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
-                Collapsible Scripture Blocks
-              </h3>
-              <p className="text-sm text-[#6e6e73] leading-relaxed">
-                Referenced verses appear as compact, elegant badges. Tap to
-                unfold the full passage directly inside your note without
-                disrupting your outline hierarchy.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
-              <span>Powered by YouVersion Platform API</span>
-            </div>
-          </div>
-
-          {/* Card 2: Translation Comparison */}
-          <div className="apple-card p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
-                <Columns className="w-6 h-6 text-[#c5a028]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
-                Side-by-Side Comparisons
-              </h3>
-              <p className="text-sm text-[#6e6e73] leading-relaxed">
-                Examine subtle nuances across ESV, NIV, KJV, NLT, and AMP side
-                by side in multi-card stacks to grasp Greek and Hebrew depth.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
-              <span>Multi-Translation Matrix</span>
-            </div>
-          </div>
-
-          {/* Card 3: AI Smart Shorthand */}
-          {/* <div className="apple-card p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
-                <Sparkles className="w-6 h-6 text-[#c5a028]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
-                AI Reference Detection
-              </h3>
-              <p className="text-sm text-[#6e6e73] leading-relaxed">
-                Type informal shorthand like <code className="bg-[#f5f5f7] px-1.5 py-0.5 rounded text-xs text-[#1d1d1f]">Rom 8:28</code> or <code className="bg-[#f5f5f7] px-1.5 py-0.5 rounded text-xs text-[#1d1d1f]">Jn 3:16</code>, and watch it seamlessly morph into an interactive card as you type.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
-              <span>Sub-250ms Cloud Edge Parsing</span>
-            </div>
-          </div> */}
-
-          {/* Card 4: Folder Organization */}
-          {/* <div className="apple-card p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
-                <FolderTree className="w-6 h-6 text-[#c5a028]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
-                Hierarchical Sermon Folders
-              </h3>
-              <p className="text-sm text-[#6e6e73] leading-relaxed">
-                Group personal devotions, teaching series, and seminary
-                coursework into clean, nested folders with live note counters
-                and swipe management.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
-              <span>Optimized FlashList Architecture</span>
-            </div>
-          </div> */}
-
-          {/* Card 5: Real-time Sharing */}
-          {/* <div className="apple-card p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
-                <Users className="w-6 h-6 text-[#c5a028]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
-                Collaborative Study Loops
-              </h3>
-              <p className="text-sm text-[#6e6e73] leading-relaxed">
-                Share notes securely via email coordinates with granular VIEW or
-                EDIT permissions. Build teaching outlines together with co-pastors
-                or study partners.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
-              <span>Granular Access Matrix</span>
-            </div>
-          </div> */}
-
-          {/* Card 6: Zero-Friction Cloud Persistence */}
-          <div className="apple-card p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
-                <CloudCheck className="w-6 h-6 text-[#c5a028]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
-                Silent Cloud Persistence
-              </h3>
-              <p className="text-sm text-[#6e6e73] leading-relaxed">
-                Background synchronization concurrent with typing. Optimistic
-                locking protects your content across devices with zero data
-                loss, even offline.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
-              <span>PostgreSQL JSONB + Local Sync Queue</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 4. DESIGNED FOR PURPOSE / PERSONAS */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#f5f5f7]">
@@ -366,51 +223,141 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. DOWNLOAD & APP STORE CTA */}
+      {/* 3. CORE ARCHITECTURAL FEATURES */}
       <section
-        id="download"
-        className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center"
+        id="features"
+        className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
       >
-        <div className="apple-card bg-[#1d1d1f]  p-10 sm:p-16 rounded-3xl relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl mx-auto space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-medium  border border-white/15">
-              <BookOpen className="w-3.5 h-3.5 text-[#d4af37]" />
-              <span>Available for Mobile & Tablet</span>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-xs uppercase tracking-widest text-[#c5a028] font-bold">
+            Theological Architecture
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] mt-3 leading-tight">
+            Engineered without compromise for spiritual depth.
+          </h2>
+          <p className="text-base sm:text-lg text-[#6e6e73] mt-4">
+            Traditional word processors interrupt your flow with endless
+            formatting and app switching. Faith Pad keeps your eyes on the text.
+          </p>
+        </div>
+
+        {/* Feature Cards Grid (Apple Grid) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Card 1: Collapsible Verses */}
+          <div className="apple-card p-8 flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
+                <BookOpen className="w-6 h-6 text-[#c5a028]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
+                Collapsible Scripture Blocks
+              </h3>
+              <p className="text-sm text-[#6e6e73] leading-relaxed">
+                Referenced verses appear as compact, elegant badges. Tap to
+                unfold the full passage directly inside your note without
+                disrupting your outline hierarchy.
+              </p>
             </div>
-
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
-              Begin your sacred study with Faith Pad today.
-            </h2>
-
-            <p className="text-sm sm:text-base text-[#86868b] leading-relaxed">
-              Experience the clarity of scripture-integrated note-taking. Free
-              to download on iOS and Android.
-            </p>
-
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="#download"
-                className="bg-black text-white px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-[#333] transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
-              >
-                <Smartphone className="w-4 h-4" />
-                <span>App Store (iOS)</span>
-              </a>
-              <a
-                href="#download"
-                className="bg-black/80 border border-white/20 px-8 py-3.5 rounded-full text-sm font-semibold hover:bg-black text-white transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
-              >
-                <Smartphone className="w-4 h-4" />
-                <span>Google Play (Android)</span>
-              </a>
+            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
+              <span>Powered by YouVersion Platform API</span>
             </div>
+          </div>
 
-            {/* <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-[#86868b]">
-              <span>Passwordless Google</span>
-              <span>&bull;</span>
-              <span>YouVersion Platform Verified</span>
-              <span>&bull;</span>
-              <span>30-Day Protected Account Data</span>
-            </div> */}
+          {/* Card 2: Translation Comparison */}
+          <div className="apple-card p-8 flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
+                <Columns className="w-6 h-6 text-[#c5a028]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
+                Side-by-Side Comparisons
+              </h3>
+              <p className="text-sm text-[#6e6e73] leading-relaxed">
+                Examine subtle nuances across ESV, NIV, KJV, NLT, and AMP side
+                by side in multi-card stacks to grasp Greek and Hebrew depth.
+              </p>
+            </div>
+            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
+              <span>Multi-Translation Matrix</span>
+            </div>
+          </div>
+
+          {/* Card 3: AI Smart Shorthand */}
+          {/* <div className="apple-card p-8 flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
+                <Sparkles className="w-6 h-6 text-[#c5a028]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
+                AI Reference Detection
+              </h3>
+              <p className="text-sm text-[#6e6e73] leading-relaxed">
+                Type informal shorthand like <code className="bg-[#f5f5f7] px-1.5 py-0.5 rounded text-xs text-[#1d1d1f]">Rom 8:28</code> or <code className="bg-[#f5f5f7] px-1.5 py-0.5 rounded text-xs text-[#1d1d1f]">Jn 3:16</code>, and watch it seamlessly morph into an interactive card as you type.
+              </p>
+            </div>
+            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
+              <span>Sub-250ms Cloud Edge Parsing</span>
+            </div>
+          </div> */}
+
+          {/* Card 4: Folder Organization */}
+          {/* <div className="apple-card p-8 flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
+                <FolderTree className="w-6 h-6 text-[#c5a028]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
+                Hierarchical Sermon Folders
+              </h3>
+              <p className="text-sm text-[#6e6e73] leading-relaxed">
+                Group personal devotions, teaching series, and seminary
+                coursework into clean, nested folders with live note counters
+                and swipe management.
+              </p>
+            </div>
+            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
+              <span>Optimized FlashList Architecture</span>
+            </div>
+          </div> */}
+
+          {/* Card 5: Real-time Sharing */}
+          {/* <div className="apple-card p-8 flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
+                <Users className="w-6 h-6 text-[#c5a028]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
+                Collaborative Study Loops
+              </h3>
+              <p className="text-sm text-[#6e6e73] leading-relaxed">
+                Share notes securely via email coordinates with granular VIEW or
+                EDIT permissions. Build teaching outlines together with co-pastors
+                or study partners.
+              </p>
+            </div>
+            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
+              <span>Granular Access Matrix</span>
+            </div>
+          </div> */}
+
+          {/* Card 6: Zero-Friction Cloud Persistence */}
+          <div className="apple-card p-8 flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-black/8 flex items-center justify-center text-[#1d1d1f] mb-6">
+                <CloudCheck className="w-6 h-6 text-[#c5a028]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1d1d1f] tracking-tight mb-2">
+                Silent Cloud Persistence
+              </h3>
+              <p className="text-sm text-[#6e6e73] leading-relaxed">
+                Background synchronization concurrent with typing. Optimistic
+                locking protects your content across devices with zero data
+                loss, even offline.
+              </p>
+            </div>
+            <div className="mt-6 pt-4 border-t border-black/6 flex items-center text-xs font-semibold text-[#1d1d1f] gap-1">
+              <span>PostgreSQL JSONB + Local Sync Queue</span>
+            </div>
           </div>
         </div>
       </section>

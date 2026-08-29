@@ -19,7 +19,7 @@ const FAQ_ITEMS = [
   {
     question: "How does Scripture insertion and YouVersion integration work?",
     answer:
-      "Faith Pad provides two easy ways to insert scripture: You can type a standard reference (like 'John 3:16' or 'Rom 8:28') which our smart parsing engine resolves into a collapsible badge, or you can use the manual bottom-sheet picker to select book, chapter, verse, and version.",
+      "Faith Pad provides an easy way to insert scripture, you can use the attachment option in the toolbar at the bottom of the editor to select book, chapter, verse, and version.",
   },
   {
     question: "Which Bible translations are supported?",
@@ -29,7 +29,7 @@ const FAQ_ITEMS = [
   {
     question: "Can I use Faith Pad offline during services with weak WiFi?",
     answer:
-      "Yes. Faith Pad includes a local offline synchronization queue. You can write, format notes, and expand previously cached scripture passages completely offline. When network connectivity is restored, deltas are synchronized safely to the cloud.",
+      "Yes. Faith Pad includes a local offline synchronization queue. You can write, format notes, and expand previously cached scripture passages completely offline. When network connectivity is restored, your data is automatically synchronized safely to the cloud.",
   },
   {
     question:

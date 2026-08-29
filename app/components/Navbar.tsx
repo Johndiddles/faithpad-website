@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, BookOpen, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Features", href: "/#features" },
@@ -28,7 +29,7 @@ export default function Navbar() {
 
   // Close mobile menu on page navigation
   useEffect(() => {
-    setMobileMenuOpen(false);
+    (() => setMobileMenuOpen(false))();
   }, [pathname]);
 
   return (
@@ -39,15 +40,19 @@ export default function Navbar() {
           : "bg-white/90 backdrop-blur-md border-b border-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between backdrop-blur-md ">
         {/* Brand Logo */}
         <Link
           href="/"
           className="flex items-center gap-2.5 group focus:outline-hidden focus-visible:ring-2 focus-visible:ring-black rounded-lg"
         >
-          <div className="w-8 h-8 rounded-lg bg-[#1d1d1f] text-white flex items-center justify-center shadow-xs transition-transform duration-200 group-hover:scale-105">
-            <BookOpen className="w-4 h-4 text-[#d4af37]" />
-          </div>
+          <Image
+            src={"/images/icon.png"}
+            alt="Faith Pad Logo"
+            width={40}
+            height={40}
+            className="rounded-[10px]"
+          />
           <span className="font-semibold text-lg tracking-tight text-[#1d1d1f] flex items-center">
             Faith<span className="text-[#c5a028] ml-0.5">Pad</span>
           </span>
