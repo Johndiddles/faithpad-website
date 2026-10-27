@@ -3,12 +3,8 @@ import {
   BookOpen,
   Sparkles,
   Shield,
-  Heart,
-  Target,
-  Users,
   Compass,
   ArrowRight,
-  Layers,
   CheckCircle2,
 } from "lucide-react";
 
@@ -34,8 +30,8 @@ export default function AboutPage() {
 
         <p className="mt-6 text-lg sm:text-xl text-[#6e6e73] max-w-2xl mx-auto leading-relaxed">
           Faith Pad was born from a simple observation: mainstream note-taking
-          apps were never built for the theological depth, speed, and reverence of
-          live preaching and focused scripture study.
+          apps were never built for the theological depth, speed, and reverence
+          of live preaching and focused scripture study.
         </p>
       </section>
 
@@ -59,15 +55,15 @@ export default function AboutPage() {
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 font-bold">&bull;</span>
                   <span>
-                    Switching back and forth between a Bible app, a browser, and a
-                    blank document during fast-paced messages.
+                    Switching back and forth between a Bible app, a browser, and
+                    a blank document during fast-paced messages.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 font-bold">&bull;</span>
                   <span>
-                    Copying and pasting long scripture passages that clutter your
-                    notes and ruin outline readability.
+                    Copying and pasting long scripture passages that clutter
+                    your notes and ruin outline readability.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -89,7 +85,8 @@ export default function AboutPage() {
                 The Faith Pad Architecture
               </h2>
               <p className="text-sm sm:text-base text-[#6e6e73] leading-relaxed mb-4">
-                Faith Pad turns the note canvas into an active theological workspace:
+                Faith Pad turns the note canvas into an active theological
+                workspace:
               </p>
               <ul className="space-y-3 text-sm text-[#1d1d1f]">
                 <li className="flex items-start gap-2">
@@ -103,15 +100,15 @@ export default function AboutPage() {
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Collapsible Badges:</strong> Keep notes compact; expand
-                    verses only when you want to read them.
+                    <strong>Collapsible Badges:</strong> Keep notes compact;
+                    expand verses only when you want to read them.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Multi-Translation Side-by-Side:</strong> Compare ESV,
-                    NIV, KJV, NLT, and AMP directly in the note.
+                    <strong>Multi-Translation Side-by-Side:</strong> Compare
+                    ESV, NIV, KJV, NLT, and AMP directly in the note.
                   </span>
                 </li>
               </ul>
@@ -186,9 +183,10 @@ export default function AboutPage() {
               4. Uncompromised User Sovereignty
             </h3>
             <p className="text-sm text-[#6e6e73] leading-relaxed">
-              Your notes are personal. We never monetize user notes, sell personal
-              data, or lock your content behind proprietary traps. We enforce a
-              protected 30-day grace policy for all account lifecycles.
+              Your notes are personal. We never monetize user notes, sell
+              personal data, or lock your content behind proprietary traps. We
+              enforce a protected 30-day grace policy for all account
+              lifecycles.
             </p>
           </div>
         </div>
@@ -201,8 +199,8 @@ export default function AboutPage() {
             Experience a better way to capture God&apos;s Word.
           </h2>
           <p className="text-sm sm:text-base text-[#6e6e73]">
-            Download Faith Pad today on iOS and Android and start taking notes with
-            clarity and purpose.
+            Download Faith Pad today on iOS and Android and start taking notes
+            with clarity and purpose.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
